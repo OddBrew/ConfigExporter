@@ -1,0 +1,2 @@
+app/code/community/OddBrew/ConfigExporter/ app/code/community/OddBrew/ConfigExporter/
+app/etc/modules/OddBrew_ConfigExporter.xml app/etc/modules/OddBrew_ConfigExporter.xml

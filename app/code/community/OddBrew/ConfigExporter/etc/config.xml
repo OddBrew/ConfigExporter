@@ -5,4 +5,11 @@
             <version>1.0.0</version>
         </OddBrew_ConfigExporter>
     </modules>
+    <global>
+        <helpers>
+            <oddbrew_exporter>
+                <class>OddBrew_ConfigExporter_Helper</class>
+            </oddbrew_exporter>
+        </helpers>
+    </global>
 </config>

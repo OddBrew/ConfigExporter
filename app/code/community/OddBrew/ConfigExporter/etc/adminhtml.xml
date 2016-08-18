@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <system>
+            <children>
+                <tools>
+                    <children>
+                        <config_export translate="title" module="oddbrew_exporter">
+                            <title>Configurations Exporter</title>
+                        </config_export>
+                    </children>
+                </tools>
+            </children>
+        </system>
+    </menu>
+</config>

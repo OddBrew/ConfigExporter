@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <OddBrew_Exporter>
+            <version>1.0.0</version>
+        </OddBrew_Exporter>
+    </modules>
+    <global>
+        <helpers>
+            <oddbrew_exporter>
+                <class>OddBrew_Exporter_Helper</class>
+            </oddbrew_exporter>
+        </helpers>
+    </global>
+    <adminhtml>
+        <layout>
+            <updates>
+                <oddbrew_exporter>
+                    <file>oddbrew_exporter/oddbrew_exporter.xml</file>
+                </oddbrew_exporter>
+            </updates>
+        </layout>
+    </adminhtml>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <oddbrew_exporter after="Mage_Adminhtml">OddBrew_Exporter_Adminhtml</oddbrew_exporter>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+</config>

@@ -7,7 +7,7 @@
  * @copyright   Copyright (c) 2016 Alexandre Fayette
  * @license     https://opensource.org/licenses/MIT  MIT License
  */
-class OddBrew_Exporter_Adminhtml_OddExporter_ConfigExporterController extends Mage_Adminhtml_Controller_Action
+class OddBrew_OddExporter_Adminhtml_OddExporter_ConfigExporterController extends Mage_Adminhtml_Controller_Action
 {
     public function indexAction()
     {

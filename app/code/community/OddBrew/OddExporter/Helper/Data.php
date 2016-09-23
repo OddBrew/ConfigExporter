@@ -7,7 +7,7 @@
  * @copyright   Copyright (c) 2016 Alexandre Fayette
  * @license     https://opensource.org/licenses/MIT  MIT License
  */
-class OddBrew_Exporter_Helper_Data extends Mage_Core_Helper_Abstract
+class OddBrew_OddExporter_Helper_Data extends Mage_Core_Helper_Abstract
 {
 
     /**

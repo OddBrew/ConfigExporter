@@ -1,9 +1,11 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: Trichelieu
- * Date: 23/09/2016
- * Time: 17:26
+ * @category    OddBrew
+ * @package     OddBrew_Exporter
+ * @author      Alexandre Fayette <alexandre.fayette@gmail.com>
+ * @link        https://github.com/OddBrew/ConfigExporter
+ * @copyright   Copyright (c) 2016 Alexandre Fayette
+ * @license     https://opensource.org/licenses/MIT  MIT License
  */
 class OddBrew_OddExporter_Block_Adminhtml_System_Config_Form_Fieldset extends Mage_Adminhtml_Block_System_Config_Form_Fieldset
 {
@@ -34,6 +36,7 @@ class OddBrew_OddExporter_Block_Adminhtml_System_Config_Form_Fieldset extends Ma
      * Create export button for current group and retrieve its html
      *
      * @return string
+     * @TODO : add store and website in url
      */
     protected function _getExportButtonHtml($element)
     {

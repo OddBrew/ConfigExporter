@@ -9,6 +9,7 @@
  */
 class OddBrew_OddExporter_Helper_Data extends Mage_Core_Helper_Abstract
 {
+    const SCOPE_REGISTRY_KEY = 'oddbrew_admin_config_scope';
 
     /**
      * Retrieves all modules name
@@ -45,6 +46,7 @@ class OddBrew_OddExporter_Helper_Data extends Mage_Core_Helper_Abstract
         }
 
         $currentConfigScope = $this->getCurrentConfigScope();
+        Mage::register(self::SCOPE_REGISTRY_KEY, $currentConfigScope);
         if ($currentConfigScope['scope'] == 'wesbites') {
             /** @var Mage_Core_Model_Website $configModel */
             $configModel = Mage::getModel('core/website')->load($currentConfigScope['scope_id']);
@@ -70,15 +72,13 @@ class OddBrew_OddExporter_Helper_Data extends Mage_Core_Helper_Abstract
      */
     public function getCurrentConfigScope()
     {
-        /** @var Mage_Adminhtml_Model_Config_Data $adminConfig */
-        $adminConfig = Mage::getSingleton('adminhtml/config_data');
         $scopeId = 0;
         $scope = 'default';
-        if($scopeCode = $adminConfig->getStore()){
+        if($scopeCode = Mage::app()->getRequest()->getParam('store')){
             $scopeId = Mage::getModel('core/store')->load($scopeCode)->getId();
             $scope = 'stores';
         }
-        elseif($scopeCode = $adminConfig->getWebsite()){
+        elseif($scopeCode = Mage::app()->getRequest()->getParam('website')){
             $scopeId = Mage::getModel('core/website')->load($scopeCode)->getId();
             $scope = 'websites';
         }

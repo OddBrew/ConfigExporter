@@ -35,14 +35,20 @@ class OddBrew_OddExporter_Block_Adminhtml_System_Config_Form_Fieldset extends Ma
     /**
      * Create export button for current group and retrieve its html
      *
+     * @param Varien_Data_Form_Element_Abstract $element
+     *
      * @return string
-     * @TODO : add store and website in url
      */
     protected function _getExportButtonHtml($element)
     {
         $section = Mage::app()->getRequest()->getParam('section');
         $group = $element->getGroup()->getName();
-        $url = Mage::helper('adminhtml')->getUrl('*/oddexporter_config_export/group', array('section' => $section, 'group' => $group));
+        $url = Mage::helper('adminhtml')->getUrl('*/oddexporter_config_export/group', array(
+            'section' => $section,
+            'group' => $group,
+            'store' => Mage::app()->getRequest()->getParam('store'),
+            'website' => Mage::app()->getRequest()->getParam('website')
+        ));
 
         /** @var Mage_Adminhtml_Block_Widget_Button $button */
         $button = Mage::app()->getLayout()->createBlock('adminhtml/widget_button');

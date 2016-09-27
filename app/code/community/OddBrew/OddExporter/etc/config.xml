@@ -15,6 +15,7 @@
             <adminhtml>
                 <rewrite>
                     <system_config_form_fieldset>OddBrew_OddExporter_Block_Adminhtml_System_Config_Form_Fieldset</system_config_form_fieldset>
+                    <system_config_edit>OddBrew_OddExporter_Block_Adminhtml_System_Config_Edit</system_config_edit>
                 </rewrite>
             </adminhtml>
         </blocks>

@@ -66,6 +66,53 @@ class OddBrew_OddExporter_Helper_Data extends Mage_Core_Helper_Abstract
     }
 
     /**
+     * Retrieves an array containing the config of the specified section.
+     * Key is the config path, value is the config value.
+     *
+     * @param $section
+     *
+     * @return array
+     * @throws Mage_Core_Exception
+     */
+    public function getConfigBySection($section)
+    {
+        $config = Mage::getConfig()->loadModulesConfiguration('system.xml');
+        $groupsNode = $config->getNode('sections/' . $section . '/groups');
+        if (!$groupsNode) {
+            Mage::throwException($this->__('Bad section config name'));
+        }
+        if (!$groupsNode->hasChildren()) {
+            Mage::throwException($this->__('No field to export under this section'));
+        }
+
+        $currentConfigScope = $this->getCurrentConfigScope();
+        Mage::register(self::SCOPE_REGISTRY_KEY, $currentConfigScope);
+        if ($currentConfigScope['scope'] == 'wesbites') {
+            /** @var Mage_Core_Model_Website $configModel */
+            $configModel = Mage::getModel('core/website')->load($currentConfigScope['scope_id']);
+        } else {
+            /** @var Mage_Core_Model_Store $configModel */
+            $configModel = Mage::getModel('core/store')->load($currentConfigScope['scope_id']);
+        }
+
+        $result = array();
+        /** @var SimpleXMLElement $group */
+        foreach ($groupsNode->children() as $group) {
+            $groupName = $group->getName();
+            $fieldsNode = $config->getNode('sections/' . $section . '/groups/' . $groupName . '/fields');
+            /** @var SimpleXMLElement $field */
+            if ($fieldsNode->hasChildren()) {
+                foreach ($fieldsNode->children() as $field) {
+                    $path          = $section . '/' . $groupName . '/' . $field->getName();
+                    $result[$path] = $configModel->getConfig($path);
+                }
+            }
+        }
+
+        return $result;
+    }
+
+    /**
      * Return current config scope in admin
      *
      * @return array

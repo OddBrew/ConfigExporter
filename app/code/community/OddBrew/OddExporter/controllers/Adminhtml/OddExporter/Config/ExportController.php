@@ -22,10 +22,32 @@ class OddBrew_OddExporter_Adminhtml_OddExporter_Config_ExportController extends 
         }
         catch(Mage_Core_Exception $e){
             Mage::getSingleton('admin/session')->addError($e->getMessage());
-            return $this->_redirect('admin/system_config/edit', array('section' => $section, 'group' => $group));
+            return $this->_redirect('admin/system_config/edit', array('section' => $section));
         }
         $config = Zend_Json::encode($config);
         $fileName = $this->_getFileName($section, $group);
+
+        return $this->_prepareDownloadResponse($fileName.'.json', $config, 'application/json');
+    }
+
+    /**
+     * Export an admin config section
+     *
+     * @return $this|Mage_Core_Controller_Varien_Action
+     */
+    public function sectionAction()
+    {
+        $section = Mage::app()->getRequest()->getParam('section');
+        try{
+            $config = Mage::helper('oddbrew_oddexporter')->getConfigBySection($section);
+        }
+        catch(Mage_Core_Exception $e){
+            Mage::getSingleton('admin/session')->addError($e->getMessage());
+            return $this->_redirect('admin/system_config/edit', array('section' => $section));
+        }
+
+        $config = Zend_Json::encode($config);
+        $fileName = $this->_getFileName($section);
 
         return $this->_prepareDownloadResponse($fileName.'.json', $config, 'application/json');
     }

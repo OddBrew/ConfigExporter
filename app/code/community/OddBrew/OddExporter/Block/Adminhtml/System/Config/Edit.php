@@ -37,14 +37,6 @@ class OddBrew_OddExporter_Block_Adminhtml_System_Config_Edit extends Mage_Adminh
         return parent::_prepareLayout();
     }
 
-    public function getSaveButtonHtml()
-    {
-        $html = $this->getChildHtml('save_button');
-        $html .= $this->getExportSectionButtonHtml();
-
-        return $html;
-    }
-
     public function getExportSectionButtonHtml()
     {
         return $this->getChildHtml('export_config_section');

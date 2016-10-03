@@ -17,7 +17,10 @@
             <td>
                 <h3<?php if ($this->getHeaderCss()): ?> class="<?php echo $this->getHeaderCss() ?>"<?php endif; ?>><?php echo Mage::helper('adminhtml')->__($this->getTitle()) ?></h3>
             </td>
-            <td class="form-buttons"><?php echo $this->getSaveButtonHtml() ?></td>
+            <td class="form-buttons">
+                <?php echo $this->getSaveButtonHtml() ?>
+                <?php echo $this->getExportSectionButtonHtml() ?>
+            </td>
         </tr>
     </table>
 </div>

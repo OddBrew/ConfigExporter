@@ -10,6 +10,12 @@
 class OddBrew_OddExporter_Block_Adminhtml_System_Config_Edit extends Mage_Adminhtml_Block_System_Config_Edit
 {
 
+    public function __construct()
+    {
+        parent::__construct();
+        $this->setTemplate('oddbrew/oddexporter/system/config/edit.phtml');
+    }
+
     protected function _prepareLayout()
     {
         $section = Mage::app()->getRequest()->getParam('section');

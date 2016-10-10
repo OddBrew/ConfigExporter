@@ -24,6 +24,7 @@
         </tr>
     </table>
 </div>
+<?php echo $this->getChildHtml('oddexporter_upload_form'); ?>
 <form action="<?php echo $this->getSaveUrl() ?>" method="post" id="config_edit_form" enctype="multipart/form-data">
     <?php echo $this->getBlockHtml('formkey') ?>
     <?php echo $this->getChildHtml('form') ?>

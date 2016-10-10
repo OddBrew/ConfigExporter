@@ -34,6 +34,8 @@ class OddBrew_OddExporter_Block_Adminhtml_System_Config_Edit extends Mage_Adminh
                 ))
         );
 
+        $this->setChild('oddexporter_upload_form', $this->getLayout()->createBlock('oddbrew_oddexporter/adminhtml_system_config_edit_upload'));
+
         return parent::_prepareLayout();
     }
 

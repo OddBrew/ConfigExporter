@@ -18,6 +18,9 @@
                     <system_config_edit>OddBrew_OddExporter_Block_Adminhtml_System_Config_Edit</system_config_edit>
                 </rewrite>
             </adminhtml>
+            <oddbrew_oddexporter>
+                <class>OddBrew_OddExporter_Block</class>
+            </oddbrew_oddexporter>
         </blocks>
     </global>
     <admin>

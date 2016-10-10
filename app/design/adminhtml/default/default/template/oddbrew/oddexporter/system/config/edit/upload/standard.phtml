@@ -1,0 +1,19 @@
+<?php
+/**
+ * @category    OddBrew
+ * @package     OddBrew_Exporter
+ * @author      Alexandre Fayette <alexandre.fayette@gmail.com>
+ * @link        https://github.com/OddBrew/ConfigExporter
+ * @copyright   Copyright (c) 2016 Alexandre Fayette
+ * @license     https://opensource.org/licenses/MIT  MIT License
+ */
+
+/** @var OddBrew_OddExporter_Block_Adminhtml_System_Config_Edit_Upload $this */
+?>
+
+<div class="oddexporter-upload-form">
+    <form action="<?php $this->getFormAction() ?>" method="post">
+        Select config files : <input type="file"  multiple>
+        <input type="submit" class="form-button">
+    </form>
+</div>

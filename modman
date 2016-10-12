@@ -1,3 +1,5 @@
 app/code/community/OddBrew/OddExporter/ app/code/community/OddBrew/OddExporter/
 app/etc/modules/OddBrew_OddExporter.xml app/etc/modules/OddBrew_OddExporter.xml
 app/design/adminhtml/default/default/template/oddbrew/oddexporter/ app/design/adminhtml/default/default/template/oddbrew/oddexporter/
+app/design/adminhtml/default/default/layout/oddbrew/oddexporter.xml app/design/adminhtml/default/default/layout/oddbrew/oddexporter.xml
+skin/adminhtml/default/default/oddbrew/oddexporter/ skin/adminhtml/default/default/oddbrew/oddexporter/

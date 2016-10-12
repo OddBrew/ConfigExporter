@@ -34,4 +34,13 @@
             </adminhtml>
         </routers>
     </admin>
+    <adminhtml>
+        <layout>
+            <updates>
+                <oddbrew_oddexporter>
+                    <file>oddbrew/oddexporter.xml</file>
+                </oddbrew_oddexporter>
+            </updates>
+        </layout>
+    </adminhtml>
 </config>

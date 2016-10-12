@@ -11,9 +11,12 @@
 /** @var OddBrew_OddExporter_Block_Adminhtml_System_Config_Edit_Upload $this */
 ?>
 
-<div class="oddexporter-upload-form">
-    <form action="<?php $this->getFormAction() ?>" method="post">
-        Select config files : <input type="file"  multiple>
+<?php $helper = Mage::helper('oddbrew_oddexporter'); /** @var $helper OddBrew_OddExporter_Helper_Data */?>
+
+<div class="oddexporter-upload-form standard">
+    <form action="<?php echo $this->getFormAction() ?>" method="post">
+        <label for="oddexporter-files"><?php echo $helper->__('Import config files :'); ?></label>
+        <input id="oddexporter-files" name="files" type="file"  multiple>
         <input type="submit" class="form-button">
     </form>
 </div>

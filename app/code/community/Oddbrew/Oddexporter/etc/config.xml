@@ -1,25 +1,25 @@
 <?xml version="1.0"?>
 <config>
     <modules>
-        <OddBrew_OddExporter>
+        <Oddbrew_Oddexporter>
             <version>1.0.0</version>
-        </OddBrew_OddExporter>
+        </Oddbrew_Oddexporter>
     </modules>
     <global>
         <helpers>
             <oddbrew_oddexporter>
-                <class>OddBrew_OddExporter_Helper</class>
+                <class>Oddbrew_Oddexporter_Helper</class>
             </oddbrew_oddexporter>
         </helpers>
         <blocks>
             <adminhtml>
                 <rewrite>
-                    <system_config_form_fieldset>OddBrew_OddExporter_Block_Adminhtml_System_Config_Form_Fieldset</system_config_form_fieldset>
-                    <system_config_edit>OddBrew_OddExporter_Block_Adminhtml_System_Config_Edit</system_config_edit>
+                    <system_config_form_fieldset>Oddbrew_Oddexporter_Block_Adminhtml_System_Config_Form_Fieldset</system_config_form_fieldset>
+                    <system_config_edit>Oddbrew_Oddexporter_Block_Adminhtml_System_Config_Edit</system_config_edit>
                 </rewrite>
             </adminhtml>
             <oddbrew_oddexporter>
-                <class>OddBrew_OddExporter_Block</class>
+                <class>Oddbrew_Oddexporter_Block</class>
             </oddbrew_oddexporter>
         </blocks>
     </global>
@@ -28,7 +28,7 @@
             <adminhtml>
                 <args>
                     <modules>
-                        <oddbrew_oddexporter before="Mage_Adminhtml">OddBrew_OddExporter_Adminhtml</oddbrew_oddexporter>
+                        <Oddbrew_Oddexporter before="Mage_Adminhtml">Oddbrew_Oddexporter_Adminhtml</Oddbrew_Oddexporter>
                     </modules>
                 </args>
             </adminhtml>

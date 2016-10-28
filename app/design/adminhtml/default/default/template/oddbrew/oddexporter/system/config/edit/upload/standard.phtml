@@ -8,16 +8,17 @@
  * @license     https://opensource.org/licenses/MIT  MIT License
  */
 
-/** @var OddBrew_OddExporter_Block_Adminhtml_System_Config_Edit_Upload $this */
+/** @var Oddbrew_Oddexporter_Block_Adminhtml_System_Config_Edit_Upload $this */
 ?>
 
-<?php $helper = Mage::helper('oddbrew_oddexporter'); /** @var $helper OddBrew_OddExporter_Helper_Data */?>
+<?php $helper = Mage::helper('oddbrew_oddexporter'); /** @var $helper Oddbrew_Oddexporter_Helper_Data */?>
 <?php $filesInputName = $this->getFilesInputName(); ?>
 
 <div class="oddexporter-upload-form standard">
     <form action="<?php echo $this->getFormAction() ?>" method="post">
         <label for="oddexporter-files"><?php echo $helper->__('Import config files :'); ?></label>
         <input id="oddexporter-files" name="<?php echo $filesInputName ?>" type="file"  multiple>
+        <input type="hidden" name="form_key" value="<?php echo Mage::getSingleton('core/session')->getFormKey() ?>">
         <input type="submit" class="form-button">
     </form>
 </div>

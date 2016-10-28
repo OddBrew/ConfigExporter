@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
 <config>
     <modules>
-        <OddBrew_OddExporter>
+        <Oddbrew_Oddexporter>
             <active>true</active>
             <codePool>community</codePool>
-        </OddBrew_OddExporter>
+        </Oddbrew_Oddexporter>
     </modules>
 </config>

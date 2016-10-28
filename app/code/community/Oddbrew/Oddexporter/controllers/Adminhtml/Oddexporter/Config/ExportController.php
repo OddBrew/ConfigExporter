@@ -1,13 +1,13 @@
 <?php
 /**
- * @category    OddBrew
- * @package     OddBrew_Exporter
+ * @category    Oddbrew
+ * @package     Oddbrew_Oddexporter
  * @author      Alexandre Fayette <alexandre.fayette@gmail.com>
  * @link        https://github.com/OddBrew/ConfigExporter
  * @copyright   Copyright (c) 2016 Alexandre Fayette
  * @license     https://opensource.org/licenses/MIT  MIT License
  */
-class OddBrew_OddExporter_Adminhtml_OddExporter_Config_ExportController extends Mage_Adminhtml_Controller_Action
+class Oddbrew_Oddexporter_Adminhtml_Oddexporter_Config_ExportController extends Mage_Adminhtml_Controller_Action
 {
 
     /**
@@ -55,7 +55,7 @@ class OddBrew_OddExporter_Adminhtml_OddExporter_Config_ExportController extends 
     protected function _getFileName($section, $group = '')
     {
         $group = $group ? $group.'_' : '';
-        $currentScope = Mage::registry(OddBrew_OddExporter_Helper_Data::SCOPE_REGISTRY_KEY);
+        $currentScope = Mage::registry(Oddbrew_Oddexporter_Helper_Data::SCOPE_REGISTRY_KEY);
         $fileName = 'oddexporter_config_'.$section.'_'.$group.$currentScope['scope'].'_'.$currentScope['scope_id'];
 
         return $fileName;

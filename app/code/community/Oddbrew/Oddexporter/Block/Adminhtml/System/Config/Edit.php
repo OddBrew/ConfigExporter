@@ -1,13 +1,13 @@
 <?php
 /**
- * @category    OddBrew
- * @package     OddBrew_Exporter
+ * @category    Oddbrew
+ * @package     Oddbrew_Oddexporter
  * @author      Alexandre Fayette <alexandre.fayette@gmail.com>
  * @link        https://github.com/OddBrew/ConfigExporter
  * @copyright   Copyright (c) 2016 Alexandre Fayette
  * @license     https://opensource.org/licenses/MIT  MIT License
  */
-class OddBrew_OddExporter_Block_Adminhtml_System_Config_Edit extends Mage_Adminhtml_Block_System_Config_Edit
+class Oddbrew_Oddexporter_Block_Adminhtml_System_Config_Edit extends Mage_Adminhtml_Block_System_Config_Edit
 {
 
     public function __construct()

@@ -1,13 +1,13 @@
 <?php
 /**
- * @category    OddBrew
- * @package     OddBrew_Exporter
+ * @category    Oddbrew
+ * @package     Oddbrew_Oddexporter
  * @author      Alexandre Fayette <alexandre.fayette@gmail.com>
  * @link        https://github.com/OddBrew/ConfigExporter
  * @copyright   Copyright (c) 2016 Alexandre Fayette
  * @license     https://opensource.org/licenses/MIT  MIT License
  */
-class OddBrew_OddExporter_Block_Adminhtml_System_Config_Edit_Upload extends Mage_Adminhtml_Block_Template
+class Oddbrew_Oddexporter_Block_Adminhtml_System_Config_Edit_Upload extends Mage_Adminhtml_Block_Template
 {
     const FILES_INPUT_NAME  = 'oddfiles';
 
@@ -19,7 +19,7 @@ class OddBrew_OddExporter_Block_Adminhtml_System_Config_Edit_Upload extends Mage
 
     public function getFormAction()
     {
-        return Mage::helper('adminhtml')->getUrl('*/oddexporter_config_import/files/');
+        return Mage::helper('adminhtml')->getUrl('adminhtml/oddexporter_config_import/files');
     }
 
     public function getFilesInputName()

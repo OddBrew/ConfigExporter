@@ -1,13 +1,13 @@
 <?php
 /**
- * @category    OddBrew
- * @package     OddBrew_Exporter
+ * @category    Oddbrew
+ * @package     Oddbrew_Oddexporter
  * @author      Alexandre Fayette <alexandre.fayette@gmail.com>
  * @link        https://github.com/OddBrew/ConfigExporter
  * @copyright   Copyright (c) 2016 Alexandre Fayette
  * @license     https://opensource.org/licenses/MIT  MIT License
  */
-class OddBrew_OddExporter_Helper_Data extends Mage_Core_Helper_Abstract
+class Oddbrew_Oddexporter_Helper_Data extends Mage_Core_Helper_Abstract
 {
     const SCOPE_REGISTRY_KEY = 'oddbrew_admin_config_scope';
 

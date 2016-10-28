@@ -28,7 +28,7 @@
             <adminhtml>
                 <args>
                     <modules>
-                        <oddbrew_oddexporter after="Mage_Adminhtml">OddBrew_OddExporter_Adminhtml</oddbrew_oddexporter>
+                        <oddbrew_oddexporter before="Mage_Adminhtml">OddBrew_OddExporter_Adminhtml</oddbrew_oddexporter>
                     </modules>
                 </args>
             </adminhtml>
